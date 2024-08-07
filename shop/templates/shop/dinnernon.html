@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>     
+
+</head>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #444444;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-products {
+    padding: 80px 0 54px;
+    color: #F7EF8A;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+    color: #F7EF8A;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444; 
+   font-family: 'Times New Roman', Times, serif;
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+		transform: scale(1.2,1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("https://assets.telegraphindia.com/telegraph/2021/Dec/1640418118_eat-1.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("https://i0.wp.com/letscookup.in/wp-content/uploads/2019/09/pexels-photo-9567999.jpeg?fit=700%2C933&ssl=1") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("https://www.lekhafoods.com/media/1050746/egg-appam.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("https://img.freepik.com/premium-photo/schezwan-idli-manchurian-idly-tasty-indo-chinese-recipe-selective-focus_466689-32184.jpg?w=2000") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-5 .part-1::before {
+    background: url("https://4.bp.blogspot.com/-JCeRyeKM7yQ/V-rSy1yR2gI/AAAAAAAAfOM/EJx-9SZdCskGomX9fnUBvMl70fSBoUsdgCEw/s1600/DSC_0372ee-3.jpg") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-6 .part-1::before {
+    background: url("https://i.pinimg.com/736x/c0/62/ea/c062ea5d6c9fe9da38ad3ee63dec2252.jpg") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-7 .part-1::before {
+    background: url("https://th-i.thgim.com/public/life-and-style/food/6itqn7/article26664832.ece/alternates/FREE_1200/EATSTREETMUTTONCHUKKANEW") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-8 .part-1::before {
+    background: url("https://apollo-singapore.akamaized.net/v1/files/t4edg44j1vug1-IN/image;s=850x0") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-9 .part-1::before {
+    background: url("https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/neer-dosa-recipe-500x375.jpg") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-10 .part-1::before {
+    background: url("https://img-global.cpcdn.com/recipes/3faf842d89c94823/680x482cq70/%E0%AE%87%E0%AE%9F%E0%AE%AF%E0%AE%AA%E0%AE%AA%E0%AE%AE-%E0%AE%86%E0%AE%9F%E0%AE%9F%E0%AE%95%E0%AE%95%E0%AE%B2-%E0%AE%AA%E0%AE%AF-%E0%AE%9A%E0%AE%AF%E0%AE%AE%E0%AE%B1-%E0%AE%AE%E0%AE%95%E0%AE%95%E0%AE%AF-%E0%AE%AA%E0%AE%95%E0%AE%AA%E0%AE%AA%E0%AE%9F%E0%AE%AE.jpg") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-11 .part-1::before {
+    background: url("https://img.freepik.com/premium-photo/hyderabadi-mutton-paya-nehari-nazari-nihari-masala-served-with-naan-rice_466689-6104.jpg?w=2000") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-12 .part-1::before {
+    background: url("https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/vi58cgrnh9yed6sjy9pg") no-repeat center;
+    background-size: cover;
+}
+
+
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+
+</style>
+
+<body>
+  
+  {% include 'shop/navbarlinks/navcart.html' %}
+ 
+
+<!-- hero -->
+<section id="hero">
+  
+</section>
+<!-- cart -->
+
+
+<section class="section-products">
+  <div class="container">
+    <h1 style="padding-left:440px; padding-top: 20px;color: #F7EF8A; font-family: 'Times New Roman', Times, serif;">DINNER NON-VEG</h1>
+      <br>
+      <br>
+
+      <div class="row">
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-1" class="single-product">
+                  <div class="part-1">
+                      <ul>
+                          <li><a href="#"data-name="EGG DOSA" data-price="75"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                          <li><a href="#"data-name="EGG.DOSA" data-price="75"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                          <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="part-2">
+                      <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">EGG DOSA</h3>
+                      <h4 class="product-old-price"style="font-family: 'Times New Roman', Times, serif;">₹99.99</h4>
+                      <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹75</h4>
+                  </div>
+              </div>
+          </div>
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-2" class="single-product">
+                  <div class="part-1">
+                      <span class="discount">NEW</span>
+                      <ul>
+                        <li><a href="#"data-name="IDIYAPPAM WITH CHICKEN CURRY" data-price="155"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                          <li><a href="#"data-name="IDIYAPPAM.WITH.CHICKEN.CURRY" data-price="155"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                          <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="part-2">
+                    <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">IDIYAPPAM WITH CHICKEN CURRY</h3>
+                    <h4 class="product-old-price"style="font-family: 'Times New Roman', Times, serif;">₹200.99</h4>
+                      <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹155</h4>
+                  </div>
+              </div>
+          </div>
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-3" class="single-product">
+                  <div class="part-1">
+                      <ul>
+                        <li><a href="#"data-name="EGG APPAM" data-price="125"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                          <li><a href="#"data-name="EGG.APPAM" data-price="125"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                          <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="part-2">
+                    <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">EGG APPAM</h3>
+
+                      <h4 class="product-old-price"style="font-family: 'Times New Roman', Times, serif;">₹170</h4>
+                      <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹125</h4>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-4" class="single-product">
+                  <div class="part-1">
+                      <span class="new">new</span>
+                      <ul>
+                        <li><a href="#"data-name="MUTTON MANCHURION IDLY" data-price="135"class="add-to-cart btn"><i class="fas fa-shopping-cart"></i></a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                          <li><a href="#"data-name="MUTTON.MANCHURION.IDLY" data-price="135"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                          <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="part-2">
+                    <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">MUTTON MANCHURION IDLY</h3>
+
+                      <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹135</h4>
+                  </div>
+              </div>
+          </div>
+
+
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-5" class="single-product">
+                  <div class="part-1">
+                      <ul>
+                        <li><a href="#"data-name="KARI DOSA" data-price="185"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                          <li><a href="#"data-name="KARI.DOSA" data-price="185"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                          <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="part-2">
+                    <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">KARI DOSA</h3>
+
+                      <h4 class="product-old-price"style="font-family: 'Times New Roman', Times, serif;">₹200</h4>
+                      <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹185</h4>
+                  </div>
+              </div>
+          </div>
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-6" class="single-product">
+                  <div class="part-1">
+                      <span class="discount">New</span>
+                      <ul>
+                        <li><a href="#"data-name="CHICKEN IDLY" data-price="145"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                          <li><a href="#"data-name="CHICKEN.IDLY" data-price="145"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                          <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="part-2">
+                    <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">CHICKEN IDLY</h3>
+
+                      <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹145</h4>
+                  </div>
+              </div>
+          </div>
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-7" class="single-product">
+                  <div class="part-1">
+                      <ul>
+                        <li><a href="#"data-name="PAROTTA WITH MUTTON PEPPER" data-price="125"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                          <li><a href="#"data-name="PAROTTA.WITH.MUTTON.PEPPER" data-price="125"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                          <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="part-2">
+                    <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">PAROTTA WITH MUTTON PEPPER</h3>
+
+                      <h4 class="product-old-price"style="font-family: 'Times New Roman', Times, serif;">₹155</h4>
+                      <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹125</h4>
+                  </div>
+              </div>
+          </div>
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div id="product-8" class="single-product">
+                <div class="part-1">
+                    <ul>
+                      <li><a href="#"data-name="MUTTON DOSA" data-price="145"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                        <li><a href="#"data-name="MUTTON.DOSA" data-price="145"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                        <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                    </ul>
+                </div>
+                <div class="part-2">
+                  <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">MUTTON DOSA</h3>
+
+                    <h4 class="product-old-price"style="font-family: 'Times New Roman', Times, serif;">₹185</h4>
+                    <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹145</h4>
+                </div>
+            </div>
+        </div>
+        <!-- Single Product -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div id="product-9" class="single-product">
+              <div class="part-1">
+                  <ul>
+                    <li><a href="#"data-name="NEHAR WITH MUTTON" data-price="155"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                      <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                      <li><a href="#"data-name="NEHAR.WITH.MUTTON" data-price="155"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                      <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                  </ul>
+              </div>
+              <div class="part-2">
+                <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">NEHAR WITH MUTTON</h3>
+
+                  <h4 class="product-old-price"style="font-family: 'Times New Roman', Times, serif;">₹200</h4>
+                  <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹155</h4>
+              </div>
+          </div>
+      </div>
+      <!-- Single Product -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div id="product-10" class="single-product">
+            <div class="part-1">
+                <ul>
+                  <li><a href="#"data-name="IDIYAPPAM ATTUKAL PAYA" data-price="175"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                    <li><a href="#"data-name="IDIYAPPA.ATTUKAL.PAYA" data-price="175"class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                    <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                </ul>
+            </div>
+            <div class="part-2">
+              <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">IDIYAPPAM ATTUKAL PAYA</h3>
+
+                <h4 class="product-old-price"style="font-family: 'Times New Roman', Times, serif;">₹210</h4>
+                <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹175</h4>
+            </div>
+        </div>
+    </div>
+    <!-- Single Product -->
+    <div class="col-md-6 col-lg-4 col-xl-3">
+      <div id="product-11" class="single-product">
+          <div class="part-1">
+              <ul>
+                <li><a href="#"data-name="NAZARI NAAN" data-price="165"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                  <li><a href="#"data-name="NAZARI.NAAN" data-price="165" class="add-to-cart btn "><i class="fas fa-plus"></i></a></li>
+                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+              </ul>
+          </div>
+          <div class="part-2">
+            <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">NAZARI NAAN</h3>
+
+              <h4 class="product-old-price"style="font-family: 'Times New Roman', Times, serif;">₹250</h4>
+              <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹165</h4>
+          </div>
+      </div>
+  </div>
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-12" class="single-product">
+                  <div class="part-1">
+                      <span class="new">new</span>
+                      <ul>
+                        <li><a href="#"data-name="CRAB PARATTA" data-price="190"class="add-to-cart btn "><i class="fas fa-shopping-cart"></i></a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                          <li><a href="#"data-name="CRAB.PARATTA" data-price="190" class=" add-to-cart btn btn-primary"><i class="fas fa-plus"></i></a></li>
+                          <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                       
+                      </ul>
+                  </div>
+                  <div class="part-2">
+                    <h3 class="product-title" style="font-family: 'Times New Roman', Times, serif;">CRAB PARATTA</h3>
+
+                      <h4 class="product-price"style="font-family: 'Times New Roman', Times, serif;">₹190</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="hero"></section>
+
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+        <button >
+			<a href="http://127.0.0.1:8000/cart/">Order now</a></button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+
+<script>
+  // ************************************************
+// Shopping Cart API
+// ************************************************
+
+var shoppingCart = (function() {
+  // =============================
+  // Private methods and propeties
+  // =============================
+  cart = [];
+  
+  // Constructor
+  function Item(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  
+  // Save cart
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+  
+    // Load cart
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+  
+
+  // =============================
+  // Public methods and propeties
+  // =============================
+  var obj = {};
+  
+  // Add to cart
+  obj.addItemToCart = function(name, price, count) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(name, price, count);
+    cart.push(item);
+    saveCart();
+  }
+  // Set count from item
+  obj.setCountForItem = function(name, count) {
+    for(var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
+  // Remove item from cart
+  obj.removeItemFromCart = function(name) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart[item].count --;
+          if(cart[item].count === 0) {
+            cart.splice(item, 1);
+          }
+          break;
+        }
+    }
+    saveCart();
+  }
+
+  // Remove all items from cart
+  obj.removeItemFromCartAll = function(name) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart.splice(item, 1);
+        break;
+      }
+    }
+    saveCart();
+  }
+
+  // Clear cart
+  obj.clearCart = function() {
+    cart = [];
+    saveCart();
+  }
+
+  // Count cart 
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  }
+
+  // Total cart
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(2));
+  }
+
+  // List cart
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for(p in item) {
+        itemCopy[p] = item[p];
+
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(2);
+      cartCopy.push(itemCopy)
+    }
+    return cartCopy;
+  }
+
+  // cart : Array
+  // Item : Object/Class
+  // addItemToCart : Function
+  // removeItemFromCart : Function
+  // removeItemFromCartAll : Function
+  // clearCart : Function
+  // countCart : Function
+  // totalCart : Function
+  // listCart : Function
+  // saveCart : Function
+  // loadCart : Function
+  return obj;
+})();
+
+
+// *****************************************
+// Triggers / Events
+// ***************************************** 
+// Add item
+$('.add-to-cart').click(function(event) {
+  event.preventDefault();
+  var name = $(this).data('name');
+  var price = Number($(this).data('price'));
+  shoppingCart.addItemToCart(name, price, 1);
+  displayCart();
+});
+
+// Clear items
+$('.clear-cart').click(function() {
+  shoppingCart.clearCart();
+  displayCart();
+});
+
+
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+ 
+  for(var i in cartArray) {
+    output += "<tr>"
+      + "<td>" + cartArray[i].name + "</td>" 
+      + "<td>(" + cartArray[i].price + ")</td>"
+      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + " = " 
+      + "<td>" + cartArray[i].total + "</td>" 
+      +  "</tr>";
+}
+
+  $('.show-cart').html(output);
+
+  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-count').html(shoppingCart.totalCount());
+}
+
+// Delete item button
+
+$('.show-cart').on("click", ".delete-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
+})
+
+
+// -1
+$('.show-cart').on("click", ".minus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+})
+// +1
+$('.show-cart').on("click", ".plus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.addItemToCart(name);
+  displayCart();
+})
+
+// Item count input
+$('.show-cart').on("change", ".item-count", function(event) {
+   var name = $(this).data('name');
+   var count = Number($(this).val());
+  shoppingCart.setCountForItem(name, count);
+  displayCart();
+});
+
+displayCart();
+
+</script>
+
+<div class="container">
+  <p class="float-end"; ><a href="#">Back to top</a></p>
+<br>
+  <!--footer pagination-  -->
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">&laquo;</a>
+    <a href="http://127.0.0.1:8000/menu/">1</a>
+    <a href="http://127.0.0.1:8000/menu/"class="active">2</a>
+    <a href="http://127.0.0.1:8000/breakfastveg/">3</a>
+    <a href="http://127.0.0.1:8000/lunchveg/">4</a>
+    <a href="http://127.0.0.1:8000/dinnerveg/">5</a>
+    <a href="http://127.0.0.1:8000/juice/">6</a>
+    <a href="http://127.0.0.1:8000/chatsveg/">7</a>
+    <a href="http://127.0.0.1:8000/breakfastnon/">8</a>
+    <a href="http://127.0.0.1:8000/lunchnon/">9</a>
+    <a href="http://127.0.0.1:8000/dinnernon/"class="active">10</a>
+    <a href="http://127.0.0.1:8000/soups/">11</a>
+    <a href="http://127.0.0.1:8000/starters/">12</a>
+  </div>
+  </div>
+{% include 'shop/navbarlinks/footer.html' %}
+</body>
+</html>

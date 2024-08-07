@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900');
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box; 
+        box-sizing: border-box; 
+    }
+    body {
+        font-size: 14px;
+       
+    }
+    img {width: 100%;}
+    a { text-decoration: none; display: block;}
+    .crd_dsgn {
+        width: 300px;
+        border:1px solid #c2986b;
+        height: 260px;
+        float: left;
+        margin: 0 30px 40px 0;
+        transition: all 0.5s ease-in-out 0s;
+    }
+    .crd_dsgn  a { display: block; }
+    .crd_img {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        margin: -10px 0 0 -10px;
+        transition: all 0.5s ease-in-out 0s;
+    }
+    .crd_img img {
+        height: 100%;
+        transform: scale(1.0);
+        transition: all 0.9s ease-in-out 0s;
+    }
+    .crd_hdng h5 {
+        width: 100%;
+        height: 50px;
+        padding: 0 20px;
+        line-height: 50px;
+        font-size: 18px;
+        font-weight: normal;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        transition: all 0.5s ease-in-out 0s;
+    }
+    .crd_dsgn:hover .crd_img { margin: 0;}
+    .crd_dsgn:hover .crd_hdng h5 { margin-top: 5px; }
+    .crd_dsgn:hover { background-color: #c2986b; border-width: 3px;}
+    .crd_dsgn:hover .crd_img img { transform: scale(1.5); }
+</style>
+
+<body>
+    {% include 'shop/navbarlinks/navbar.html' %}
+  <hr>
+  <!-- veg hero section -->
+  <section id="hero1">
+    <div class="hero1-container">
+           
+    </div>
+ 
+</section>
+<br>
+<br>
+<div class="container">
+  <main>
+    <div class="card_desing_cnt">
+        <div class="crd_dsgn">
+            <a href="javascript:;">
+                <div class="crd_img">
+                    <a href="http://127.0.0.1:8000/lunchnon/">
+                    <img src="https://i.pinimg.com/originals/e3/d0/86/e3d086800546d84d641102cba6fd084a.gif" alt="">
+                    </a>
+                </div>
+                <div class="crd_hdng">
+                    <h5>Happy &amp; Briyani</h5>
+                </div>
+            </a>
+        </div>
+        <div class="crd_dsgn">
+            <a href="javascript:;">
+                <div class="crd_img">
+                    <a href="http://127.0.0.1:8000/juice/">
+                    <img src="https://i.pinimg.com/originals/e2/9f/58/e29f5830e41460ab340128e7b2061e4d.gif" alt="">
+                    </a>
+                </div>
+                <div class="crd_hdng">
+                    <h5>Sad &amp; Juice</h5>
+                </div>
+            </a>
+        </div>
+        <div class="crd_dsgn">
+            <a href="javascript:;">
+                <div class="crd_img">
+                    <a href="http://127.0.0.1:8000/starters/">
+                    <img src="https://i.pinimg.com/originals/f8/72/43/f8724385014673be89d86bb2b6c0ed67.gif" alt="">
+                </a>
+                </div>
+                <div class="crd_hdng">
+                    <h5>Angry &amp; Staters</h5>
+                </div>
+            </a>
+        </div>
+        <div class="crd_dsgn">
+            <a href="javascript:;">
+                <div class="crd_img">
+                    <a href="http://127.0.0.1:8000/chatsveg/">
+                    <img src="https://i.pinimg.com/originals/6a/92/bc/6a92bcb593f741e62032d003d1d355a9.gif" alt="">
+                </a>
+                </div>
+                <div class="crd_hdng">
+                    <h5>Tired &amp; chat </h5>
+                </div>
+            </a>
+        </div>
+<br>
+<br>
+        <div class="crd_dsgn">
+            <a href="javascript:;">
+                <div class="crd_img">
+                    <img src="https://i.pinimg.com/236x/c5/17/ef/c517ef0921f06ec59316a386a27cf764.jpg" alt="">
+                </div>
+                <div class="crd_hdng">
+                    <h5>Confused?ckeck</h5>
+                </div>
+            </a>
+        </div>
+      
+    </div>
+</main>
+</div>
+
+<!-- back to top footer -->
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <p class="float-end"; ><a href="#"></a></p>
+<br>
+  <!--footer pagination-  -->
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="http://127.0.0.1:8000/menu/">1</a>
+    <a href="http://127.0.0.1:8000/menu/">2</a>
+    <a href="http://127.0.0.1:8000/breakfastveg/">3</a>
+    <a href="http://127.0.0.1:8000/lunchveg/">4</a>
+    <a href="http://127.0.0.1:8000/dinnerveg/">5</a>
+    <a href="http://127.0.0.1:8000/juice/">6</a>
+    <a href="http://127.0.0.1:8000/chatsveg/">7</a>
+    <a href="http://127.0.0.1:8000/breakfastnon/">8</a>
+    <a href="http://127.0.0.1:8000/lunchnon/">9</a>
+    <a href="http://127.0.0.1:8000/dinnernon/">10</a>
+    <a href="http://127.0.0.1:8000/soups/">11</a>
+    <a href="http://127.0.0.1:8000/starters/">12</a>
+    <a href="http://127.0.0.1:8000/foodrecom/"class="active">13</a>
+   
+  </div>
+  </div>
+
+  
+  
+{% include 'shop/navbarlinks/footer.html' %}
+</body>
+</html>

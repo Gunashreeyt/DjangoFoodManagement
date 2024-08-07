@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- Bootsrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>     
+  
+</head>
+<style>
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+} 
+/* hero1 */
+#hero1{
+    display:table;
+    width: 100%;
+    height: 130px;
+    background: url(https://img.freepik.com/free-vector/hand-drawn-indian-cuisine-illustration_23-2149323580.jpg?w=2000) top center;
+    background-size: cover;
+    filter: brightness(120%);
+}
+@media (min-width: 1024px){
+    #hero1{
+        background-attachment: fixed;
+    }
+}
+
+#hero1 .hero1-logo{
+    margin: 20px;
+    max-width: 100%;
+}
+
+#hero1 .hero1-container{
+ 
+ display: table-cell;
+ margin: 0;
+ padding:0;
+ text-align: center;
+ vertical-align: middle;
+}
+
+</style>
+<body>
+    {% include 'shop/navbarlinks/navcart.html' %}
+ 
+
+<!-- veg hero section -->
+    <section id="hero1">
+      <div class="hero1-container">
+             
+      </div>
+   
+  </section>
+ 
+
+<!-- veg menus -->
+
+<h1 style="padding-left:840px; padding-top: 20px;color: #F7EF8A;"> VEG MENU</h1>
+<hr size="8" width="150px" > 
+
+    <ul class="cards">
+        <li>
+          <a href="http://127.0.0.1:8000/breakfastveg/" class="card">
+            <img src="https://i.pinimg.com/564x/25/11/ae/2511aea623ba7893f6401be65b835f7b.jpg" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                <div class="card__header-text">
+                  <h3 class="card__title">  BREAKFAST</h3>            
+                  <span class="card__status">1 hour ago</span>
+                </div>
+              </div>
+              <p class="card__description">Sometimes I've believed as many as six impossible things before breakfast.</p>
+            </div>
+          </a>      
+        </li>
+        <li>
+          <a href="http://127.0.0.1:8000/lunchveg/" class="card">
+            <img src="https://i.pinimg.com/564x/63/5d/72/635d72cd248940a79766dbd422fff7ed.jpg" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                <div class="card__header-text">
+                  <h3 class="card__title">LUNCH</h3>
+                  <span class="card__status">3 hours ago</span>
+                </div>
+              </div>
+              <p class="card__description">My favorite subject was lunch time.</p>
+            </div>
+          </a>
+        </li>
+        
+            <a href="http://127.0.0.1:8000/dinnerveg/" class="card">
+              <img src="https://i.pinimg.com/564x/83/4a/11/834a1170f844965e9640d8ee384cca4e.jpg" class="card__image" alt="" />
+              <div class="card__overlay">
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                  <div class="card__header-text">
+                    <h3 class="card__title">DINNER</h3>
+                    <span class="card__status">3 hours ago</span>
+                  </div>          
+                </div>
+                <p class="card__description">A restaurant is a fantasy-a kind of living fantasy in which diners are the most important members of the cast.</p>
+              </div>
+            </a>
+          </li> 
+          <a href="http://127.0.0.1:8000/juice/" class="card">
+            <img src="https://i.pinimg.com/564x/74/bf/94/74bf94caf99a3bcb83a6f7b47a16c16c.jpg" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                <div class="card__header-text">
+                  <h3 class="card__title">JUICE</h3>
+                  <span class="card__status">3 hours ago</span>
+                </div>          
+              </div>
+              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+            </div>
+          </a>
+        </li> 
+        <a href="http://127.0.0.1:8000/chatsveg/" class="card">
+            <img src="https://i.pinimg.com/564x/f5/9b/2e/f59b2e795fb6f3645d4538ac7d6cc704.jpg" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                <div class="card__header-text">
+                  <h3 class="card__title">CHATS</h3>
+                  <span class="card__status">3 hours ago</span>
+                </div>          
+              </div>
+              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+            </div>
+          </a>
+        </li>
+           
+      </ul>
+
+      <!-- hero for  non veg meals -->
+
+      <section id="hero1">
+        <div class="hero1-container">
+               
+        </div>
+    </section>
+
+    <!-- non veg menus -->
+        <h1 style="padding-left:800px; padding-top: 20px;color: #F7EF8A;"> NON-VEG MENU</h1>
+        <hr size="8" width="200px" > 
+
+
+    <ul class="cards">
+        <li>
+          <a href="http://127.0.0.1:8000/breakfastnon/" class="card">
+            <img src="https://i.pinimg.com/564x/bc/b8/23/bcb8230defdf04542e8d0d7ff4f02c15.jpg" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                <div class="card__header-text">
+                  <h3 class="card__title">  BREAKFAST</h3>            
+                  <span class="card__status">1 hour ago</span>
+                </div>
+              </div>
+              <p class="card__description">Sometimes I've believed as many as six impossible things before breakfast.</p>
+            </div>
+          </a>      
+        </li>
+        <li>
+          <a href="http://127.0.0.1:8000/lunchnon/" class="card">
+            <img src="https://i.pinimg.com/564x/1f/21/7a/1f217a689dd380d0c90f4493592402fc.jpg" class="card__image" alt="" />
+            <div class="card__overlay">        
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                <div class="card__header-text">
+                  <h3 class="card__title">LUNCH</h3>
+                  <span class="card__status">3 hours ago</span>
+                </div>
+              </div>
+              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+            </div>
+          </a>
+        </li>
+        
+            <a href="http://127.0.0.1:8000/dinnernon/" class="card">
+              <img src="https://i.pinimg.com/564x/d7/61/67/d7616768621cc544dd45e006a926acd8.jpg" class="card__image" alt="" />
+              <div class="card__overlay">
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                  <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                  <div class="card__header-text">
+                    <h3 class="card__title">DINNER</h3>
+                    <span class="card__status">3 hours ago</span>
+                  </div>          
+                </div>
+                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+              </div>
+            </a>
+          </li> 
+          <a href="http://127.0.0.1:8000/soups/" class="card">
+            <img src="https://i.pinimg.com/564x/d0/88/f2/d088f22660e58f3d5a0014117e2f513d.jpg" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                <div class="card__header-text">
+                  <h3 class="card__title">SOUPS</h3>
+                  <span class="card__status">3 hours ago</span>
+                </div>          
+              </div>
+              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+            </div>
+          </a>
+        </li> 
+        <a href="http://127.0.0.1:8000/starters/" class="card">
+            <img src="https://i.pinimg.com/564x/fd/e9/f1/fde9f18828f6573471ec7daeb4ac8d4a.jpg" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                <img class="card__thumb" src="https://graphicsfamily.com/wp-content/uploads/edd/2021/06/Editable-Photoshop-Food-Logo-Design-PNG-Transparent.png" alt="" />
+                <div class="card__header-text">
+                  <h3 class="card__title">STARTERS</h3>
+                  <span class="card__status">3 hours ago</span>
+                </div>          
+              </div>
+              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+            </div>
+          </a>
+        </li>
+           
+      </ul>
+	<!-- veg hero section -->
+  <section id="hero1">
+    <div class="hero1-container">
+           
+    </div>
+</section>
+<!-- back to top footer -->
+<br>
+<br>
+<div class="container">
+  <p class="float-end"; ><a href="#">Back to top</a></p>
+<br>
+  <!--footer pagination-  -->
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="http://127.0.0.1:8000/menu/">1</a>
+    <a href="http://127.0.0.1:8000/menu/"class="active">2</a>
+    <a href="http://127.0.0.1:8000/breakfastveg/">3</a>
+    <a href="http://127.0.0.1:8000/lunchveg/">4</a>
+    <a href="http://127.0.0.1:8000/dinnerveg/">5</a>
+    <a href="http://127.0.0.1:8000/juice/">6</a>
+    <a href="http://127.0.0.1:8000/chatsveg/">7</a>
+    <a href="http://127.0.0.1:8000/breakfastnon/">8</a>
+    <a href="http://127.0.0.1:8000/lunchnon/">9</a>
+    <a href="http://127.0.0.1:8000/dinnernon/">10</a>
+    <a href="http://127.0.0.1:8000/dinnerveg/">11</a>
+    <a href="http://127.0.0.1:8000/soups/">12</a>
+    <a href="http://127.0.0.1:8000/starters/">13</a>
+  </div>
+  </div>
+
+	  {% include 'shop/navbarlinks/footer.html' %}
+</body>
+
+</html>

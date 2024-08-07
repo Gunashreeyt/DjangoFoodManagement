@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Restaurant</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="main.css">
+<script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+  <style>
+    
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.cover{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    background: black;
+}
+.phone{
+    z-index: 1;
+    font-weight: 200;
+}
+.phone i{
+    color: #000;
+}
+.phone a{
+    color:#000;
+    font-size: 13px;
+    font-weight: bold;
+}
+.reg{
+    width: 50%;
+    text-align:right;
+}
+.reg a{
+    color:#000;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+}
+.social-icon{
+    display: inline-block;
+    width: 50%;
+    
+}
+.social-icon p{
+    display:block;
+    width: 100%;
+
+}
+.social-icon p a{
+    height: 30px;
+    margin-right: 10px;
+}
+.social-icon p a i{
+    font-size: 13px;
+    color: #000;
+}
+.social-icon p a:hover{            /* icon of the top twitter hover effect  */
+    background:#f08902;
+    border-color: black;
+}
+.social-icon p a:hover i{ 
+    color:#fff;
+}
+
+/*==========Navbar=============*/
+
+.bg-color{
+    background:black;
+}
+.navbar-brand{
+    color:#F7EF8A;
+    font-weight: bold;
+    font-size: 35px!important;
+}
+.nav-link{
+    font-weight: bold;
+    color:#F7EF8A;
+    font-size: 20px;
+}
+.btn-group{
+    color: #F7EF8A;
+}
+.navbar-toggler i{
+    color:#F7EF8A;
+}
+
+/*========End of Navbarhttps://d3q33rbmdkxzj.cloudfront.net/1589466137456_aFz3CE.png===========*/
+/*==========Hero Section https://media.istockphoto.com/photos/table-top-view-of-spicy-food-picture-id1316145932?k=20&m=1316145932&s=170667a&w=0&h=hDDRA16Zp-SHNi_-m_qUVTZkCGf17SPbmHIZtCqFg00============*/
+
+
+/*==========End of Hero Section===========*/
+
+body {
+	background: black  ;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2 {
+	color:#F7EF8A;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 60px;
+}
+h2::after {
+	content: "";
+	width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	border-radius: 1px;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	color: #747d89;
+	min-height: 325px;
+	text-align: center;
+	overflow: hidden;
+}
+.carousel .thumb-wrapper {
+	padding: 25px 15px;
+	background: #fff;
+	border-radius: 6px;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+.carousel .item .img-box {
+	height: 120px;
+	margin-bottom: 20px;
+	width: 100%;
+	position: relative;
+}
+.carousel .item img {	
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.carousel .item h4 {
+	font-size: 18px;
+}
+.carousel .item h4, .carousel .item p, .carousel .item ul {
+	margin-bottom: 5px;
+}
+.carousel .thumb-content .btn {
+	color:#F7EF8A;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: none;
+	border: 1px solid #F7EF8A;
+	padding: 6px 14px;
+	margin-top: 5px;
+	line-height: 16px;
+	border-radius: 20px;
+}
+.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
+	color: #fff;
+	background: #7ac400;
+	box-shadow: none;
+}
+.carousel .thumb-content .btn i {
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+.carousel .item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.carousel .item-price strike {
+	opacity: 0.7;
+	margin-right: 5px;
+}
+.carousel-control-prev, .carousel-control-next {
+	height: 44px;
+	width: 40px;
+	background: #7ac400;	
+	margin: auto 0;
+	border-radius: 4px;
+	opacity: 0.8;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+	background: #78bf00;
+	opacity: 1;
+}
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 36px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin: -19px 0 0 0;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: #fff;
+	text-shadow: none;
+	font-weight: bold;
+}
+.carousel-control-prev i {
+	margin-left: -2px;
+}
+.carousel-control-next i {
+	margin-right: -4px;
+}		
+.carousel-indicators {
+	bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border: none;
+}
+.carousel-indicators li {	
+	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+	background: rgba(0, 0, 0, 0.6);
+}
+.carousel .wish-icon {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 99;
+	cursor: pointer;
+	font-size: 16px;
+	color: #abb0b8;
+}
+.carousel .wish-icon .fa-heart {
+	color: #ff6161;
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+/* footer pagination */
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+hr {
+        height: 2px;
+        background-color: #F7EF8A;
+        border: none;
+      }
+
+/* jumbotron */
+#myDIV {
+      width: 1600px;
+      height: 200px;
+      background: pink;
+      animation: mymove 2s infinite;
+    }
+    
+    @keyframes mymove { 0% {background-color:#F7EF8A} 50% {background-color: #D2B9D3} 50% {background-color:#F9B7FF}}
+    
+	</style>
+<script>
+$(document).ready(function(){
+	$(".wish-icon i").click(function(){
+		$(this).toggleClass("fa-heart fa-heart-o");
+	});
+});	
+</script>
+
+  <body>
+	
+ 
+        <!--Nav-->
+        <nav class="navbar navbar-expand-lg main-navbar bg-color main-navbar-color"
+        id="main-navbar">
+        <div class="container">
+			<a class="navbar-brand" href="#">DELLICIO</a>
+			<div class="order-lg-last btn-group">
+                <i class="fas fa-shopping-bag fa-2x"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart"> (<span class="total-count"></span>)  </i>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#myNav" aria-controls="nav" aria-expanded="false"
+            aria-label="Toggle navigation">
+			<i class="fas fa-bars"></i></button>
+			<div class="collapse navbar-collapse"id="myNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a href="http://127.0.0.1:8000/"class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="http://127.0.0.1:8000/menu/"class="nav-link">Menu</a>
+					</li>
+					<li class="nav-item">
+						<a href="http://127.0.0.1:8000/about/"class="nav-link">About</a>
+					</li>
+					
+					<li class="nav-item">
+						<a href="http://127.0.0.1:8000/cart/"class="nav-link">Cart</a>
+					</li>
+					
+				</ul>
+        </div>
+        </div>
+		
+        </nav>
+		
+        <!--End of Nav-->
+    </section>
+   
+    
+    <!---End of Hero Section-->
+
+      
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

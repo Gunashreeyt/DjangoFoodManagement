@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .h1{
+    color: #F7EF8A;
+  }
+.chef{
+    margin: 0;
+    padding-bottom:20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  .box{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+  .card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background:#F7EF8A ;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+  }
+  .card:before,
+  .card:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #F7EF8A;
+    transition: 0.5s;
+    z-index:-1;
+  }
+  .card:hover:before{
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card:hover:after{
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  }
+  .card:hover .imgBx
+  {
+    bottom: 80px;
+  }
+  .card .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .card .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 60px;
+      text-align: center;
+  }
+
+  .card .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 20px;
+   color:black;
+   text-transform: uppercase;
+  } 
+
+  .card .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color:grey;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+   } 
+
+
+/* online order cards https://wallpaperaccess.com/full/2483952.png */
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter:  #F7EF8A;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1500px;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+}
+
+
+.hero-section{
+  align-items: flex-start;
+  background-image: linear-gradient(15deg,black 90%, #2a6973 150%);
+  display: flex;
+  min-height: 100%;
+justify-content:center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+  
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-xxl);
+  grid-row-gap: var(--spacing-xxl);
+  max-width: var(--width-container);
+  width: 100%;
+  
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+    filter: brightness(130%);
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+/* hero1 */
+#hero1{
+    display:table;
+    width: 100%;
+    height: 130px;
+    background: url(https://img.freepik.com/free-vector/hand-drawn-indian-cuisine-illustration_23-2149323580.jpg?w=2000) top center;
+    background-size: cover;
+    filter: brightness(120%);
+}
+@media (min-width: 1024px){
+    #hero1{
+        background-attachment: fixed;
+    }
+}
+
+#hero1 .hero1-logo{
+    margin: 20px;
+    max-width: 100%;
+}
+
+#hero1 .hero1-container{
+ 
+ display: table-cell;
+ margin: 0;
+ padding:0;
+ text-align: center;
+ vertical-align: middle;
+}
+hr {
+        height: 2px;
+        background-color: #F7EF8A;
+        border: none;
+      }
+   
+</style>
+
+<body>
+    {% include 'shop/navbarlinks/indexnavbar.html' %}
+    <br>
+    <div class="container">
+    <div class="alert alert-danger" role="alert" style="background-color: #F7EF8A;">
+      <marquee style="color: black;">Mouth Watering Foods .....!  <a href="#" class="alert-link">SHOP NOW</a>. Give it a try if you like.</marquee>
+    </div>
+  </div>
+  <section id="hero1">
+    <div class="hero1-container">
+           
+    </div>
+</section>
+   
+  	<h1 style="padding-left:750px; padding-top: 20px;color: #F7EF8A;">CHOOSE YOUR TYPE</h1>
+     
+    <br>
+    <br>
+<div class="chef">
+  <div class="box">
+      <div class="card">
+        <div class="imgBx">
+            <a href="http://127.0.0.1:8000/menu/">
+            <img src="https://cdn.dribbble.com/users/602333/screenshots/3658518/without-mockup-3.gif" alt="images">
+            </a>
+        </div>
+        <div class="details">
+            <h2>ORDER <br><span>No more waiting</span></h2>
+        </div>
+      </div>
+    
+       <div class="card">
+         <div class="imgBx">
+            <a href="http://127.0.0.1:8000/foodrecom/">
+            <img src="https://images.squarespace-cdn.com/content/v1/54a43027e4b0e8454930051c/1544213616126-XGR35ABBUG5IUG883TZ3/JEDI-Beginnings1.gif" alt="images">
+        </a>
+         </div>
+         <div class="details">
+            <h2>FOOD RECOMENDATION<br><span> choose mood we suggest food</span></h2>
+          </div>
+       </div>
+
+       <div class="card">
+         <div class="imgBx">
+            <a href="http://127.0.0.1:8000/combo/">
+            <img src="https://img.freepik.com/free-vector/combo-offer-concept-illustration_114360-6034.jpg?size=626&ext=jpg&ga=GA1.2.1681355300.1657169548" alt="images">
+        </a>
+         </div>
+         <div class="details">
+            <h2>COMBO ZONE<br><span>Take your favourites </span></h2>
+          </div>
+       </div>
+ 
+  </div>
+</div>
+<br>
+	<!-- trend -->
+  
+
+   <!---End of Hero Section-->
+
+   <section id="hero1">
+    <div class="hero1-container">
+           
+    </div>
+</section>
+
+
+<!-- trend -->
+
+
+  <h1 style="padding-left:750px;padding-top: 50px;   color: #F7EF8A;">TREND OF THE WEEK</h1>
+  
+
+  <section class="hero-section">
+    
+    <div class="card-grid">
+      
+      <a class="card" href="http://127.0.0.1:8000/chatsveg/">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/564x/83/4a/11/834a1170f844965e9640d8ee384cca4e.jpg)"></div> 
+      </a>
+      <a class="card" href="http://127.0.0.1:8000/lunchnon/">
+        <div class="card__background" style="background-image: url(https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/thczxs9jkhbdqzufhllw)"></div>
+      </a>
+      <a class="card" href="http://127.0.0.1:8000/starters/">
+        <div class="card__background" style="background-image: url(https://media.istockphoto.com/photos/chicken-on-a-hot-flaming-barbecue-picture-id481754150?k=20&m=481754150&s=612x612&w=0&h=Kw0zFkwU8pCZCQ87lWWZv-tn5X6hZP8-NelWTbm9GGY=)"></div>
+      </a>
+      <a class="card" href="http://127.0.0.1:8000/juice/">
+        <div class="card__background" style="background-image: url(https://c4.wallpaperflare.com/wallpaper/256/692/28/summer-drinks-mojito-green-lemon-ice-cup-water-splash-wallpaper-preview.jpg)"></div>
+    </a>
+
+  </section>
+  </section>
+
+
+  <!-- about -->
+  <section id="hero">
+    <br>
+  <br>
+  <br>
+  <br>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        
+        <img src="https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg"  style="width: 1750px; height: 600px;" alt="...">
+      
+      <center>
+        <div class="carousel-caption d-none d-md-block">
+          <h1 style="padding-bottom: 80px;color: #F7EF8A;">ABOUT</h1>
+          
+          <h2 style="padding-bottom: 50px;color: #F7EF8A;">“Bringing good food into your everyday”
+            …that’s our mission at foodpanda. Whether it’s by delivering food on our signature pink bikes, providing insights into the newest food trends, or showcasing local favorite restaurants, we’re on a mission to redefine how food, people, culture and tech are connected.
+            
+            With over 40 nationalities and 20 languages spoken across our markets, we pride ourselves on our focus on inclusion and diversity. We are able to exchange and bring to the table the best practices (and food!) from each corner of the world.</h2>
+        </div>
+      </div>
+    
+    </center>
+     
+   
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  </section>
+  
+<!-- back to top footer -->
+<br>
+<br>
+<div class="container">
+  <p class="float-end"; ><a href="#">Back to top</a></p>
+<br>
+  <!--footer pagination-  -->
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="http://127.0.0.1:8000/menu/"class="active">1</a>
+    <a href="http://127.0.0.1:8000/menu/">2</a>
+    <a href="http://127.0.0.1:8000/breakfastveg/">3</a>
+    <a href="http://127.0.0.1:8000/lunchveg/">4</a>
+    <a href="http://127.0.0.1:8000/dinnerveg/">5</a>
+    <a href="http://127.0.0.1:8000/juice/">6</a>
+    <a href="http://127.0.0.1:8000/chatsveg/">7</a>
+    <a href="http://127.0.0.1:8000/breakfastnon/">8</a>
+    <a href="http://127.0.0.1:8000/lunchnon/">9</a>
+    <a href="http://127.0.0.1:8000/dinnernon/">10</a>
+    <a href="http://127.0.0.1:8000/dinnerveg/">11</a>
+    <a href="http://127.0.0.1:8000/soups/">12</a>
+    <a href="http://127.0.0.1:8000/starters/">13</a>
+   
+  </div>
+  </div>
+
+  
+  
+{% include 'shop/navbarlinks/footer.html' %}
+</body>
+</html>

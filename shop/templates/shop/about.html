@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<!-- bootstrap -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+<!-- bg -->
+        <style>
+        
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        html {
+          box-sizing: border-box;
+        }
+        
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+        
+        .column {
+          float: left;
+          width: 33.3%;
+          margin-bottom: 16px;
+          padding: 0 8px;
+        }
+        
+        @media screen and (max-width: 650px) {
+          .column {
+            width: 100%;
+            display: block;
+          }
+        }
+        
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .container {
+          padding: 0 16px;
+        }
+        
+        .container::after, .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        .title {
+          color: grey;
+        }
+        
+        .button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+        }
+        
+        .button:hover {
+          background-color: #555;
+        }
+
+        body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .navbar-brand
+{
+  font-family: 'Times New Roman', Times, serif;
+ 
+  color:red;
+  font-size: 50px;
+  margin: 0px;
+}
+  .topnav {
+    overflow: right;
+    background-color: #EBDEF0 ;
+  }
+  
+  .topnav a {
+    float: 10px;
+    color:black;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    color:black;
+    
+  }
+  
+  .topnav-left{
+    padding-left:500px;
+  }
+  .pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+/* jumbotron */
+#myDIV {
+      width: 1600px;
+      height: 200px;
+      background: pink;
+      animation: mymove 2s infinite;
+    }
+    
+    @keyframes mymove { 0% {background-color:#F9B7FF} 50% {background-color: #D2B9D3} 50% {background-color:#F9B7FF}}
+       
+       </style>
+        </head>
+
+
+        <body>
+            {% include 'shop/navbarlinks/navcart.html' %}
+  
+<hr>
+        <!--card about the team  -->
+        <div class="container">
+
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img src="https://w0.peakpx.com/wallpaper/586/172/HD-wallpaper-moana-2016-fantasy-movie-girl-orange-moana-white-disney.jpg" alt="Jane" style="width:92%">
+              <div class="container">
+                <h2>Moana</h2>
+                <p class="title">CEO & Founder</p>
+                <p>CEO & FOUNDER well trained cook</p>
+                <p>example@example.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <img src="https://storage.googleapis.com/burbcommunity-morethanthecurve/2015/01/frozen-3.jpg" alt="Jane" style="width:96%">
+              <div class="container">
+                <h2>Elsa</h2>
+                <p class="title">Art Director</p>
+                <p>Food designer</p>
+                <p>example@example.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              <img src="https://images.wallpapersden.com/image/download/2021-raya-and-the-last-dragon-poster_bGtnaWmUmZqaraWkpJRmZ21lrWZlZ2k.jpg" alt="John" style="width:80%">
+              <div class="container">
+                <h2> Doe</h2>
+                <p class="title">Designer</p>
+                <p>Indian cook</p>
+                <p>example@example.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+     <!-- FOOTER -->
+
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+
+    <!--footer pagination-  -->
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+    <a href="http://127.0.0.1:8000/menu/">1</a>
+    <a href="http://127.0.0.1:8000/menu/">2</a>
+    <a href="http://127.0.0.1:8000/breakfastveg/">3</a>
+    <a href="http://127.0.0.1:8000/lunchveg/">4</a>
+    <a href="http://127.0.0.1:8000/dinnerveg/">5</a>
+    <a href="http://127.0.0.1:8000/juice/">6</a>
+    <a href="http://127.0.0.1:8000/chatsveg/">7</a>
+    <a href="http://127.0.0.1:8000/breakfastnon/">8</a>
+    <a href="http://127.0.0.1:8000/lunchnon/">9</a>
+    <a href="http://127.0.0.1:8000/dinnernon/">10</a>
+    <a href="http://127.0.0.1:8000/dinnerveg/">11</a>
+    <a href="http://127.0.0.1:8000/soups/">12</a>
+    <a href="http://127.0.0.1:8000/starters/">13</a>
+    <a href="http://127.0.0.1:8000/about/">13</a>
+    </div>
+</footer>
+
+
+
+    {% include 'shop/navbarlinks/footer.html' %}
+
+</body>
+</html>
